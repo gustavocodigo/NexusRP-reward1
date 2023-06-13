@@ -59,10 +59,18 @@ class Store {
 
         document.getElementById("payment-debito").addEventListener("click", (event) => {
             this.paymentMethod = "debito"
-            
             let element = event.target
             document.getElementById("checked1").style.display = "none"
             document.getElementById("checked2").style.display = "block"
+        })
+
+
+        document.getElementById("input-search-container").addEventListener("keyup", (event) => {
+            if (event.keyCode === 13 || event.key === "Enter") {
+                event.target.blur()
+                alert("Pesquisar: "+event.target.value)
+              
+            }
         })
 
 
