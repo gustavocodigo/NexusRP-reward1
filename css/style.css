@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --main-font:'Inter', sans-serif;
+    --header-height: 112px;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+html {
+    background-image: url("../assets/background-page1.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-family: var(--main-font);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    
+  }
+  
+
+.page1 {
+    background-size: 100%;
+}
+
+
+
+body > .scroll-sign {
+    margin-top: 43px;
+    display: flex;
+    color: #D81650;
+    gap:10px;
+    justify-content: center;
+}
+
+
+@media (max-width: 480px) {
+    body {
+        zoom: 40%
+    }
+  
+    /* Outros estilos específicos para smartphones */
+    /* ... */
+  }
+  
+  /* Media query para smartphones com largura máxima de 767 pixels (por exemplo, iPhone 6/7/8) */
+ 
+  
+ 
+  /* Media query para tablets com largura mínima de 992 pixels (por exemplo, iPad Pro) */
+  

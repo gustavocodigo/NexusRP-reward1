@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+}
+
+.store1 {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.012) 100%);
+    border-radius: 20px;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    width: 1102px;  
+    height: 748px;
+    margin: auto;
+    background-repeat: no-repeat;
+    max-width: 100vw;
+}
+
+
+.store1>header {
+    margin:0 28px;
+    min-height: var(--header-height);
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ffffff11;
+   
+}
+
+
+#title {
+    font-size: 20px;
+    color: WHITE;
+}
+
+#title-description {
+    font-size: 16px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 4px;
+    color:rgba(255, 255, 255, 0.45);
+}
+
+
+#navigation {
+    margin-left: auto;
+    display: flex;
+    gap: 9px
+}
+
+
+#navigation > .button1-toggle-navigation {
+    padding: 8px;
+    outline: none;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    min-width: 50px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+#navigation > .button1-toggle-navigation:hover {
+    cursor: pointer;
+}
+
+#itens-component {
+    border-radius: 5px;
+    height: calc(752px - var(--header-height));
+   
+    max-height: 100%;
+    display: flex;
+   justify-content: center;
+   padding: 28px;
+}
+
+#itens-component > div {
+    
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    height: calc(100%);
+    overflow-y: scroll;
+    
+}
+
+
+
+
+#navigation > #button1 {
+    cursor: pointer;
+}
+
+
+#input-search-container {
+    background-color: transparent;
+    min-height: 50px;
+}
+
+.search-item-input {
+    transition: 0.3s;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.012) 100%);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.45);
+    width: 240px;
+    font-size:12px;
+    position: relative; /* Adicione a posição relativa ao elemento pai */
+    padding-left: 44px;
+    min-height: 50px;
+}
+
+
+#input-search-container > img{
+    position: absolute;
+    transform: translateX(16px) translateY(-32px);
+    width: 14px;
+}
+
+
+
+
+
+.search-input-outanimation {
+    transition: 0.2s linear;
+    width: 0px;
+    opacity: 0;
+}
+
+
+
+
+#navigation > #button-close {
+    outline: none;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(0deg, rgba(216, 22, 80, 0.15) 0%, rgba(216, 22, 80, 0.0795) 100%);
+    border: 1px solid rgba(216, 22, 80, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.components-bgcolor {
+    background: #D81650
+}
+
+
+
+/* remover a barra de scroll padrao */
+#itens-component > div::-webkit-scrollbar {
+    width: 0; /* Largura da barra de rolagem */
+  }
+  
+  #itens-component > div::-webkit-scrollbar-track {
+    background-color: transparent; /* Cor de fundo da trilha da barra de rolagem */
+  }
+  
+  #itens-component > div::-webkit-scrollbar-thumb {
+    background-color: #6d6d6d7f; /* Cor do polegar (parte móvel) da barra de rolagem */
+  }
+  
+  #itens-component > div::-webkit-scrollbar-thumb:hover {
+    background-color: #56565682; /* Cor do polegar da barra de rolagem ao passar o mouse */
+  }
+  
+
+
+.card-item {
+    margin-right: auto;
+    width: 100%;
+    width: 250px;
+    min-height: 300px;
+    background-color: #ffffff11;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    padding-bottom: 20px;
+}
+
+
+
+#kg {
+    padding: 10px;
+   
+    background-color: #D81650;
+    font-size: 14px;
+    color: white;
+    border-radius: 8px 0px 15px;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+
+
+.card-item > #icon {
+  margin: 0 auto;
+}
+
+
+
+
+
+.item-props {
+    padding: 0 15px;
+}
+
+#item-name-and-price{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+#item-name-and-price > #item-name {
+    color: white;
+    display: block;
+    font-size: 18px;
+}
+
+
+.priceh1 {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 18px;
+}
+
+.card-item #description {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.5;
+    display: inline;
+}
+
+.add-to-cart-button {
+    transition: 1s;
+    margin-top: 20px;
+    background-color: #00000000;
+    border: 0;
+    font-size: 12px;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+   top: auto;
+}
+
+.add-to-cart-button:hover {
+    transition: 1s;
+    
+    cursor: pointer;
+    background: linear-gradient(90deg, #D81650 0%, rgba(216, 22, 80, 0.51) 100%);
+border: 1px solid #D81650;
+
+}
+
+
+

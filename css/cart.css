@@ -1,0 +1,265 @@
+input {
+    outline: none;
+}
+/*  carrinho */
+
+/* products */
+#cart-component {
+    margin: 30px;
+    border: 1px solid rgba(199, 196, 196, 0.01);
+    height: 100%;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: auto;
+}
+
+#products-component{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+   
+    overflow-y: scroll;
+    
+    height: calc(100% - 80px);
+}
+
+/* remover barra de scroll */
+#products-component::-webkit-scrollbar {
+    width: 0; /* Largura da barra de rolagem */
+  }
+  
+  #products-component::-webkit-scrollbar-track {
+    background-color: transparent; /* Cor de fundo da trilha da barra de rolagem */
+  }
+  #products-component::-webkit-scrollbar-thumb {
+    background-color: #6d6d6d7f; /* Cor do polegar (parte móvel) da barra de rolagem */
+  }
+  #products-component::-webkit-scrollbar-thumb:hover {
+    background-color: #56565682; /* Cor do polegar da barra de rolagem ao passar o mouse */
+  }
+  
+
+
+#cart-component #product-list-div {
+   
+   width: 690px;
+   
+    height: calc(600px - 20px);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+#cart-component #product-list-div > header {
+    display: flex;
+    padding: 22px;
+    align-items: center;
+}
+
+#cart-component > #product-list-div header > h1 {
+    font-weight: bold;
+    color: white;
+    gap: 6px;
+    font-size: 14px;
+    
+}
+
+
+.cart-product {
+    height: 65px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    font-size: 8px;
+    
+    align-items: center;
+    margin: 0px 20px;
+    padding-right: 23px;
+}
+
+
+.cart-product #description {
+    white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
+      overflow: hidden; /* Esconde o conteúdo do texto que ultrapassar a largura máxima */
+      text-overflow: ellipsis; /* Adiciona os três pontos (...) no final do texto */
+    color: rgb(181, 181, 181);
+    font-weight: 200;
+    width: 150px;
+    font-size: 12px;
+}
+
+
+.cart-product #kg2 {
+    white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
+      overflow: hidden; /* Esconde o conteúdo do texto que ultrapassar a largura máxima */
+      text-overflow: ellipsis; /* Adiciona os três pontos (...) no final do texto */
+    color: rgb(181, 181, 181);
+    font-weight: 200;
+    width: 100px;
+}
+
+.cart-product #price2 {
+    white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
+      overflow: hidden; /* Esconde o conteúdo do texto que ultrapassar a largura máxima */
+      text-overflow: ellipsis; /* Adiciona os três pontos (...) no final do texto */
+    
+    font-weight: 200;
+    width: 100px;
+   
+}
+
+
+
+
+.cart-product  input {
+    width: 50px;
+    height: 31px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+/* oculta as setinhas padrao do input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+/* payment-method */
+#cart-component #payment-method-component {
+    width: 358px;
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+border-radius: 8px;
+height: auto;
+   
+}
+
+#cart-component #payment-method-component > header {
+    display: flex;
+    padding: 22px;
+    align-items: center;
+   
+}
+
+#cart-component > #payment-method-component header > h1 {
+    font-weight: bold;
+    color: white;
+    gap: 6px;
+    font-size: 14px;
+    height: auto;
+}
+
+
+.arrow-price-button {
+    opacity: 0.5;
+    transition: 0.5s
+}
+
+
+.arrow-price-button:hover {
+    opacity: 1;
+    cursor: pointer;
+    
+}
+
+.arrow-price-button:active {
+    opacity: 1;
+    cursor: pointer;
+    scale: 1.6;
+    transition: 0.1s
+}
+
+
+.remove-icon:hover {
+    transition: 0.2s;
+    scale: 1.1;
+    cursor: pointer;
+   
+}
+
+
+
+.payment-method-component{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    gap: 6px;
+    height: calc(100% - 88px);
+}
+
+.payment-method-card {
+    height: 65px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0px 23px;
+    gap: 20px;
+    color: white;
+    
+}
+
+
+.payment-method-card:hover {
+    background: rgba(255, 255, 255, 0.138);
+    cursor: pointer;
+    
+}
+
+.payment-method-card-selected {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0) 100%), rgba(255, 255, 255, 0.03);
+   
+}
+
+.resulting-payment {
+    margin-top: auto;
+    color: white;
+
+}
+
+.resulting-payment > p {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.55)
+}
+
+.resulting-payment > p > b {
+    color: white;
+}
+
+
+#finish-payment-button {
+    margin-top: 47px;
+    background: linear-gradient(90deg, #D81650 0%, rgba(216, 22, 80, 0.51) 100%);
+    font-size: 16px;
+    color: white;
+    min-height: 65px;
+    border: 1px solid #D81650;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#finish-payment-button:hover {
+    cursor: pointer;
+}
+
+.line {
+    border: 0.7px solid rgba(255, 255, 255, 0.01);
+    margin-top: 22px;
+}

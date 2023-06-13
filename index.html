@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/store.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <script src="./store-script.js"></script>
+    <title>Five M Store</title>
+</head>
+
+<body class="page1" onload="domLoaded()">
+
+    <section class="page1">
+        <div class="store1">
+            <header>
+                <img src="./assets/shop.svg" id="icon">
+                <div id="description">
+                    <h1 id="title">LOJINHA</h1>
+                    <h2 id="title-description">ITENS PARA VENDA</h2>
+                </div>
+                <nav id="navigation">
+                    <button class="components-bgcolor button1-toggle-navigation" id="button1-toggle-navigation">
+                        <img src="./assets/shop-carr.svg"> MEU CARRINHO <img src="./assets/arrow-right.svg">
+                    </button>
+
+                    
+                    <div id="input-search-container">
+                        <input id="input-filter" type="text" class="search-item-input" placeholder="PESQUISAR ITEM...">
+                        <img id="search-input-icon" src="./assets/search-icon.svg">
+                    </div>
+                   
+                    <button class="components-bgcolor" id="button-close">
+                        <img src="./assets/close.svg">
+                    </button>
+                </nav>
+            </header>
+
+
+            <main>
+                <!-- store -->
+                <div id="itens-component" style="display: none">
+                    <div>
+                        <div class="card-item" id="item-card-template" style="display: none">
+                            <label id="kg">0 KG</label>
+                            <img id="icon" src="./assets/itens/Item (1).png" width="144"></img>
+
+                            <div class="item-props">
+                                <div id="item-name-and-price">
+                                    <h1 id="item-name">Name</h1>
+                                    <h1 class="priceh1" id="price">R$ 0.000,00</h1>
+                                </div>
+                                <label id="description">Aumentará seu espaço no inventário.</label>
+                                <button class="add-to-cart-button" id="add-to-cart-button">Adicionar ao
+                                    carrinho</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- carrinho -->
+                <div id="cart-component">
+                    <div id="product-list-div">
+                        <!-- produtos -->
+                        <header>
+                            <img id="icon" src="./assets/hamburger.svg"></img>
+                            <h1>MEUS PRODUTOS</h1>
+                        </header>
+                        <div id="products-component">
+                            <div id="cart-product" class="cart-product">
+                                <img id="icon" src="./assets/itens/Item (2).png" width="65">
+                                <div>
+                                    <h1 id="name">Name</h1>
+                                    <h1 id="description" style="margin-top: 4px;" >Description</h1>
+                                </div>
+                                <div style="display:flex">
+                                    <img src="./assets/arrow-back.svg" class="arrow-price-button" id="arrow-left"
+                                        onclick="let el =this.parentElement.parentElement.querySelector('#max-item');el.value=Math.max(el.value-1,1);">
+                                    <input id="max-item" type="number" value="1" min="1"
+                                        onkeyup="" ;>
+                                    <img src="./assets/arrow-advance.svg" class="arrow-price-button" id="arrow-right"
+                                        onclick="let el =this.parentElement.parentElement.querySelector('#max-item');el.value=Math.min(parseInt(el.value)+1,999);">
+                                </div>
+
+                                <div>
+                                    <h1>PESO</h1>
+                                    <h1 style="margin-top: 4px;" id="kg2">0.1 KG</h1>
+                                </div>
+                                <div>
+
+                                    <h1 id="price2">R$ 300,00</h1>
+                                </div>
+                                <img class="remove-icon" id="remove-button" src="./assets/remove-icon.svg">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="payment-method-component">
+                        <!-- tela de pagamento -->
+                        <header>
+                            <img id="icon" src="./assets/hamburger.svg"></img>
+                            <h1>FORMA DE PAGAMENTO</h1>
+                            <div>
+
+                            </div>
+                        </header>
+                        <div class="payment-method-component" >
+                            <div class="payment-method-card" id ="payment-carteira">
+                                <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.125 2.46875C0.125 1.84715 0.37193 1.25101 0.811469 0.811469C1.25101 0.37193 1.84715 0.125 2.46875 0.125H14.1875C15.0163 0.125 15.8112 0.45424 16.3972 1.04029C16.9833 1.62634 17.3125 2.4212 17.3125 3.25V3.66875C17.7875 3.94302 18.182 4.3375 18.4563 4.81254C18.7306 5.28759 18.875 5.82646 18.875 6.375V15.75C18.875 16.5788 18.5458 17.3737 17.9597 17.9597C17.3737 18.5458 16.5788 18.875 15.75 18.875H4.03125C2.99525 18.875 2.00168 18.4634 1.26911 17.7309C0.53655 16.9983 0.125 16.0048 0.125 14.9688V2.46875ZM1.6875 2.46875C1.6875 2.67595 1.76981 2.87466 1.91632 3.02118C2.06284 3.16769 2.26155 3.25 2.46875 3.25H15.75C15.75 2.8356 15.5854 2.43817 15.2924 2.14515C14.9993 1.85212 14.6019 1.6875 14.1875 1.6875H2.46875C2.26155 1.6875 2.06284 1.76981 1.91632 1.91632C1.76981 2.06284 1.6875 2.26155 1.6875 2.46875ZM13.4062 9.5C13.199 9.5 13.0003 9.58231 12.8538 9.72882C12.7073 9.87533 12.625 10.074 12.625 10.2812C12.625 10.4885 12.7073 10.6872 12.8538 10.8337C13.0003 10.9802 13.199 11.0625 13.4062 11.0625H14.9688C15.176 11.0625 15.3747 10.9802 15.5212 10.8337C15.6677 10.6872 15.75 10.4885 15.75 10.2812C15.75 10.074 15.6677 9.87533 15.5212 9.72882C15.3747 9.58231 15.176 9.5 14.9688 9.5H13.4062Z"
+                                        fill="#D81650" />
+                                </svg>
+                                <b>Carteira</b>
+                                <svg id="checked" style="margin-left: auto;  opacity: 1; transition: 0.3s" width="17" height="13"
+                                    viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.15208 12.25L0.689575 6.7875L2.0552 5.42188L6.15208 9.51875L14.9448 0.726044L16.3104 2.09167L6.15208 12.25Z"
+                                        fill="#D81650" />
+                                </svg>
+                            </div>
+                            <div class="payment-method-card payment-method-card-selected" id="payment-debito">
+                                <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.41671 0.166656H12.5834C16.5115 0.166656 18.4761 0.166656 19.6959 1.38749C20.575 2.26561 20.8209 3.5302 20.8896 5.63541H0.110457C0.179207 3.5302 0.425041 2.26561 1.30421 1.38749C2.524 0.166656 4.48858 0.166656 8.41671 0.166656ZM12.5834 16.8333H8.41671C4.48858 16.8333 2.524 16.8333 1.30421 15.6125C0.0833739 14.3927 0.083374 12.4281 0.083374 8.49999C0.083374 8.03957 0.0833741 7.60624 0.0854575 7.19791H20.9146C20.9167 7.60624 20.9167 8.03957 20.9167 8.49999C20.9167 12.4281 20.9167 14.3927 19.6959 15.6125C18.4761 16.8333 16.5115 16.8333 12.5834 16.8333ZM4.25004 11.8854C4.04284 11.8854 3.84413 11.9677 3.69761 12.1142C3.5511 12.2607 3.46879 12.4595 3.46879 12.6667C3.46879 12.8739 3.5511 13.0726 3.69761 13.2191C3.84413 13.3656 4.04284 13.4479 4.25004 13.4479H8.41671C8.62391 13.4479 8.82262 13.3656 8.96913 13.2191C9.11565 13.0726 9.19796 12.8739 9.19796 12.6667C9.19796 12.4595 9.11565 12.2607 8.96913 12.1142C8.82262 11.9677 8.62391 11.8854 8.41671 11.8854H4.25004ZM11.0209 11.8854C10.8137 11.8854 10.615 11.9677 10.4684 12.1142C10.3219 12.2607 10.2396 12.4595 10.2396 12.6667C10.2396 12.8739 10.3219 13.0726 10.4684 13.2191C10.615 13.3656 10.8137 13.4479 11.0209 13.4479H12.5834C12.7906 13.4479 12.9893 13.3656 13.1358 13.2191C13.2823 13.0726 13.3646 12.8739 13.3646 12.6667C13.3646 12.4595 13.2823 12.2607 13.1358 12.1142C12.9893 11.9677 12.7906 11.8854 12.5834 11.8854H11.0209Z"
+                                        fill="#1657FF" />
+                                </svg>
+                                <b>Débito</b>
+                                <svg id="checked" style="margin-left: auto; transition: 0.3s; opacity: 0" width="17" height="13" viewBox="0 0 17 13" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.15208 12.25L0.689575 6.7875L2.0552 5.42188L6.15208 9.51875L14.9448 0.726044L16.3104 2.09167L6.15208 12.25Z"
+                                        fill="#D81650" />
+                                </svg>
+
+
+                            </div>
+                            <hr class="line"/>
+                            
+                            <div class="resulting-payment">
+                                <p>Desconto de Vip <b>-R$ 1000,00</b></p>
+                                <p>Total dos produtos <b id="total-price">R$ 400,00</b></p>
+                                <button id="finish-payment-button">
+                                    FINALIZAR PAGAMENTO
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </main>
+            
+        
+    </section>
+
+    <div class="scroll-sign" >
+        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M7.141 2C5.559 2 4.754 2.169 4.013 2.565C3.39502 2.89015 2.89015 3.39502 2.565 4.013C2.169 4.753 2 5.559 2 7.14V12.858C2 14.44 2.169 15.245 2.565 15.986C2.902 16.616 3.383 17.098 4.013 17.434C4.753 17.83 5.559 17.999 7.141 17.999H8.859C10.441 17.999 11.246 17.83 11.987 17.434C12.605 17.1089 13.1099 16.604 13.435 15.986C13.831 15.246 14 14.44 14 12.858V7.14C14 5.558 13.831 4.753 13.435 4.012C13.1099 3.39399 12.605 2.8891 11.987 2.564C11.247 2.169 10.441 2 8.86 2H7.141ZM7.141 0H8.859C10.873 0 11.953 0.278 12.93 0.801C13.8972 1.31243 14.6881 2.10303 15.2 3.07C15.722 4.048 16.001 5.128 16.001 7.142V12.86C16.001 14.874 15.722 15.954 15.2 16.931C14.6881 17.898 13.8972 18.6886 12.93 19.2C11.953 19.722 10.873 20.001 8.859 20.001H7.14C5.126 20.001 4.046 19.722 3.068 19.2C2.10155 18.6882 1.31133 17.8977 0.8 16.931C0.278 15.953 0 14.873 0 12.86V7.14C0 5.126 0.278 4.046 0.801 3.068C1.31292 2.10192 2.10347 1.31206 3.07 0.801C4.047 0.278 5.127 0 7.141 0ZM7 4H9V9H7V4Z"
+                fill="#D81650" />
+        </svg>
+        <b>Deslize para ver mais</b>
+    </div>
+
+    
+</body>
+
+
+
+</html>
