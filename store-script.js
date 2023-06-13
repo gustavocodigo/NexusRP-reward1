@@ -368,9 +368,13 @@ function domLoaded() {
 
     // adicionamos um callback quando o usuario requisitar a compra
     store.setPurchaseItensCallback((itens, price, formaDePagamento) => {
+        if ( itens.length == 0) {
+            alert("O CARRINHO ESTÀ VAZIO")
+            return
+        }
         let name = ""
         for (let i = 0; i < itens.length; i++) {
-            name = name + "" + itens[i].name + " " + itens[i].cartCount + "x\n"
+            name = name + itens[i].cartCount + "x " + itens[i].name + " \n" 
         }
         alert("FORMA DE PAGAMENTO: "+formaDePagamento+" \nTOTAL: "+store.formatValueToRealBrazilian(price) +"\n\n"+ name + "\n")
     })
