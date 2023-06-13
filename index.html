@@ -29,7 +29,7 @@
 
                     
                     <div id="input-search-container">
-                        <input id="input-filter" type="text" class="search-item-input" placeholder="PESQUISAR ITEM...">
+                        <input id="input-filter" type="text" class="search-item-input" placeholder="PESQUISAR ITEM..."  autocomplete="off" >
                         <img id="search-input-icon" src="./assets/search-icon.svg">
                     </div>
                    
@@ -80,7 +80,7 @@
                                 <div style="display:flex">
                                     <img src="./assets/arrow-back.svg" class="arrow-price-button" id="arrow-left"
                                         onclick="let el =this.parentElement.parentElement.querySelector('#max-item');el.value=Math.max(el.value-1,1);">
-                                    <input id="max-item" type="number" value="1" min="1"
+                                    <input id="max-item" type="number" value="1" min="1"  autocomplete="off" 
                                         onkeyup="" ;>
                                     <img src="./assets/arrow-advance.svg" class="arrow-price-button" id="arrow-right"
                                         onclick="let el =this.parentElement.parentElement.querySelector('#max-item');el.value=Math.min(parseInt(el.value)+1,999);">
@@ -119,7 +119,7 @@
                                         fill="#D81650" />
                                 </svg>
                                 <b>Carteira</b>
-                                <svg id="checked" style="margin-left: auto;  opacity: 1; transition: 0.3s" width="17" height="13"
+                                <svg id="checked1" style="margin-left: auto; transition: 0.3s" width="17" height="13"
                                     viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M6.15208 12.25L0.689575 6.7875L2.0552 5.42188L6.15208 9.51875L14.9448 0.726044L16.3104 2.09167L6.15208 12.25Z"
@@ -134,7 +134,7 @@
                                         fill="#1657FF" />
                                 </svg>
                                 <b>Débito</b>
-                                <svg id="checked" style="margin-left: auto; transition: 0.3s; opacity: 0" width="17" height="13" viewBox="0 0 17 13" fill="none"
+                                <svg id="checked2" style="margin-left: auto; transition: 0.3s; display: none" width="17" height="13" viewBox="0 0 17 13" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M6.15208 12.25L0.689575 6.7875L2.0552 5.42188L6.15208 9.51875L14.9448 0.726044L16.3104 2.09167L6.15208 12.25Z"

@@ -53,16 +53,16 @@ class Store {
             this.paymentMethod = "carteira"
            
             let element = event.target
-            document.getElementById("payment-debito").querySelector("#checked").style.opacity = "0"
-            element.querySelector("#checked").style.opacity = "1"
+            document.getElementById("checked2").style.display = "none"
+            document.getElementById("checked1").style.display = "block"
         })
 
         document.getElementById("payment-debito").addEventListener("click", (event) => {
             this.paymentMethod = "debito"
             
             let element = event.target
-            document.getElementById("payment-carteira").querySelector("#checked").style.opacity = "0"
-            element.querySelector("#checked").style.opacity = "1"
+            document.getElementById("checked1").style.display = "none"
+            document.getElementById("checked2").style.display = "block"
         })
 
 
@@ -169,7 +169,7 @@ class Store {
                     document.getElementById("search-input-icon").style.display = "block"
                 })
                 setTimeout(() => {
-                    document.getElementById("button1-toggle-navigation").innerHTML = `<img src="./assets/shop-carr.svg"> MEU CARRINHO <img src="./assets/arrow-right.svg">`
+                    document.getElementById("button1-toggle-navigation").innerHTML = `<img draggable="false" src="./assets/shop-carr.svg"> MEU CARRINHO <img draggable="false" src="./assets/arrow-right.svg">`
                 }, 0.1 * 1000)
                 document.getElementById("cart-component").style.display = "none"
                 document.getElementById("itens-component").style.display = "flex"
@@ -183,7 +183,7 @@ class Store {
                 // remover o elemento visualmente depois de 200 ms
                 setTimeout(() => {
                     document.getElementById("input-filter").style.display = ("none")
-                    document.getElementById("button1-toggle-navigation").innerHTML = `<img src="./assets/arrow-left.svg"> CONTINUAR COMPRANDO`
+                    document.getElementById("button1-toggle-navigation").innerHTML = `<img draggable="false" src="./assets/arrow-left.svg"> CONTINUAR COMPRANDO`
                 }, 0.2 * 1000)
                 document.getElementById("cart-component").style.display = "flex"
                 document.getElementById("itens-component").style.display = "none"
