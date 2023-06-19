@@ -13,6 +13,7 @@ input {
     justify-content: space-between;
     box-sizing: border-box;
     height: auto;
+    
 }
 
 #products-component{
@@ -24,6 +25,7 @@ input {
     overflow-y: scroll;
     
     height: calc(100% - 80px);
+    
 }
 
 /* remover barra de scroll */
@@ -46,7 +48,7 @@ input {
 #cart-component #product-list-div {
    
    width: 690px;
-   
+   max-width: 100%;
     height: calc(600px - 20px);
     background: rgba(255, 255, 255, 0.02);
 }
@@ -139,6 +141,7 @@ input[type="number"] {
 /* payment-method */
 #cart-component #payment-method-component {
     width: 358px;
+    max-width: 100%;
     border: 1px solid white;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.01);
