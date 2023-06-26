@@ -5,7 +5,7 @@ FrontEnd desenvolvido com tecnologia web
 <pre>
 store-script.js contem toda a logica
  
- essa aplicação possui duas tabas ( Loja e Carrinho )
+ essa aplicação possui duas tabs ( Loja e Carrinho )
  
    1 - Podera inserir itens no carrinho
    2 - Poderar remover do carrinho
