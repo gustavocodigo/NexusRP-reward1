@@ -11,7 +11,7 @@ store-script.js contem toda a logica
    2 - Poderar remover do carrinho
    3 - Podera aumenta a quantidade de itens no carrinho
    4 - Podera selecionar os dois metodos de pagamento ( carteira / debito )
-   5 - Poderá facilmente inserir itens na loja chamando o metodo addItem
+   5 - Poderá facilmente inserir itens na loja chamando o metodo addToCart
    6 - Poderá adicionar um callback na hora que o client clica em efetuar compra
 
 
