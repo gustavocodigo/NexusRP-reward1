@@ -5,7 +5,7 @@ FrontEnd desenvolvido com tecnologia web
 <pre>
 store-script.js contem toda a logica
   
-   1 - Podera inserir intens no carrinho
+   1 - Podera inserir itens no carrinho
    2 - Poderar remover do carrinho
    3 - Podera aumenta a quantidade de itens no carrinho
    4 - Podera selecionar os dois metodos de pagamento ( carteira / debito )
