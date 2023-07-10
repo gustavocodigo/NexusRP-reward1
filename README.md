@@ -20,6 +20,6 @@ store-script.js contem toda a logica
 </pre>
 
 
-Voce pode clonar o repositorio e dexecutar no seu computador
+Voce pode clonar o repositorio e executar no seu computador
 ou teste agora mesmo nesse endpoint:
 https://gustavocodigo.github.io/NexusRP-reward1/
